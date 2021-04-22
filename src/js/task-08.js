@@ -19,10 +19,7 @@ function createBoxes() {
 }
 function destroyBoxes() {
     const newBoxes = boxes.children;
-    const boxesQuantity = boxes.children.length;
-    for (let i = 0; i < boxesQuantity; i += 1){
-        newBoxes[0].remove();
-    }
+    [...newBoxes].forEach (elem => elem.remove())   
 }
 
 
